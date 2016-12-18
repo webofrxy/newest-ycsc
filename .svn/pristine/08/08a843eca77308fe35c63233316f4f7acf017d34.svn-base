@@ -1,0 +1,215 @@
+$(function(){
+//	console.log(1)
+	$.getJSON("json/product.json",function(data){
+//		console.log(2)
+		var arr_womenclothes=data.clothes.womenclothes;
+		var arr_manclothes=data.clothes.manclothes;
+		var arr_manchild=data.clothes.manchild;
+		var arr_womenchild=data.clothes.womenchild;
+		var arr_indress=data.clothes.indress;
+		var arr_dress=data.clothes.dress;
+		var obj0=$(".list_item dd").eq(0);
+		var obj1=$(".list_item dd").eq(1);
+		var obj2=$(".list_item dd").eq(2);
+		var obj3=$(".list_item dd").eq(3);
+		var obj4=$(".list_item dd").eq(4);
+		var obj5=$(".list_item dd").eq(5);
+		for(var i=0;i<arr_womenclothes.length;i++){
+			$('<a href="###">'+arr_womenclothes[i]+'</a>').appendTo(obj0);
+		}
+		for(var i=0;i<arr_manclothes.length;i++){
+			$('<a href="###">'+arr_manclothes[i]+'</a>').appendTo(obj1);
+		}
+		for(var i=0;i<arr_manchild.length;i++){
+			$('<a href="###">'+arr_manchild[i]+'</a>').appendTo(obj2);
+		}
+		for(var i=0;i<arr_womenchild.length;i++){
+			$('<a href="###">'+arr_womenchild[i]+'</a>').appendTo(obj3);
+		}
+		for(var i=0;i<arr_indress.length;i++){
+			$('<a href="###">'+arr_indress[i]+'</a>').appendTo(obj4);
+		}
+		for(var i=0;i<arr_dress.length;i++){
+			$('<a href="###">'+arr_dress[i]+'</a>').appendTo(obj5);
+		}
+	
+		
+		
+	})
+//轮播图
+	$.getJSON("json/product.json",function(data){
+//		console.log(data.scroll[0].src)
+		for(var i =0 ;i<data.scroll.length;i++){
+			
+			var $scrollpic='<li><img src="'+data.scroll[i].src+'"/></li>';
+			
+			$(".scroll_box").append($scrollpic);
+		}
+		
+		
+	})
+	var index=0;
+	var timer=0;
+	var $pic=$(".scorll_box li").size();
+	var $len=$(".circle a").size();
+	//切换图片
+	function picChange(){	
+			$(".scroll_box li").eq(index).fadeIn(500).siblings().fadeOut(500); 
+			$(".circle a").eq(index).css({"background":"orange"}).siblings().css({"background":"gray"})
+			
+	}
+	picChange();
+	//自动切换图片
+	function autoChange(){
+		clearInterval(timer);
+		timer=setInterval(function(){
+			index++
+			if(index==5){
+				index=0;
+			}
+			picChange();
+		},1000)
+	}
+	autoChange()
+	//按钮事件
+	$(".circle a").click(function(){
+//		console.log(5)
+		clearInterval(timer);
+		$(this).css({"background":"orange"}).siblings().css({"background":"gray"})
+		index=$(this).index()
+		picChange();
+		autoChange()
+	})
+	
+	
+//限时购
+	$.getJSON("json/product.json",function(data){
+//		console.log(data.xianshipart.two[0].xianshi_price)
+		var $xianshilist0='<div class="xianshilist">'+'<dl class="xianshi">'+'<dt class="xianshi_pic"><img src="'+data.xianshipart.one[0].src+'"/></dt>'+'<dd class="xianshi_time">'+data.xianshipart.one[0].xianshi_time+'</dd>'+
+		'<dd class="xianshi_name">'+data.xianshipart.one[0].xianshi_name+'</dd>'+'<dd class="xianshi_price">抢购价：'+'<span>'+data.xianshipart.one[0].xianshi_price+'</span>'+'</dd>'+'<dd class="share">分享到：'+'<span class="share_1">'+
+		'<div class="share_m">'+'<p class="share_b">分享到'+'</p>'+'<ul class="share_ul">'+'<li class="share_01">QQ空间'+'</li>'+'<li class="share_02">新浪微博'+'</li>'+'<li class="share_03">百度首页'+'</li>'+'<li class="share_04">人人网'+'</li>'+'<li class="share_05">腾讯微博'+'</li>'+'<li class="share_06">开心网'+'</li>'+
+		'<li class="share_07">腾讯朋友'+'</li>'+'<li class="share_08">微笑网'+'</li>'+'<li class="share_09">豆瓣网'+'</li>'+'<li class="share_10">腾讯交流'+'</li>'+'<li class="share_11">青蛙网'+'</li>'+'<li class="share_12">腾讯网'+'</li>'+'<li class="share_13">淘宝网'+'</li>'+'<li class="share_14">一键分享'+'</li>'+'<li class="share_15">一键分享'+'</li>'+'<li class="share_16">一键分享'+'</li>'+'<p class="share_l">更多...'+'</p>'+'</ul>'+'</div>'+'</span>'+
+		'<span class="share_2">'+'</span>'+'<span class="share_3">'+'</span>'+'<span class="share_4">'+'</span>'+'<span class="share_5">'+'</span>'+'<span class="share_6">'+'</span>'+'</dd>'+'</dl></div>'
+		var $xianshilist1='<div class="xianshilist">'+'<dl class="xianshi">'+'<dt class="xianshi_pic"><img src="'+data.xianshipart.two[0].src+'"/></dt>'+'<dd class="xianshi_time">'+data.xianshipart.two[0].xianshi_time+'</dd>'+
+		'<dd class="xianshi_name">'+data.xianshipart.two[0].xianshi_name+'</dd>'+'<dd class="xianshi_price">抢购价：'+'<span>'+data.xianshipart.two[0].xianshi_price+'</span>'+'</dd>'+'</dl></div>'
+		var $xianshilist2='<div class="xianshilist">'+'<dl class="xianshi">'+'<dt class="xianshi_pic"><img src="'+data.xianshipart.three[0].src+'"/></dt>'+'<dd class="xianshi_time">'+data.xianshipart.three[0].xianshi_time+'</dd>'+
+		'<dd class="xianshi_name">'+data.xianshipart.three[0].xianshi_name+'</dd>'+'<dd class="xianshi_price">抢购价：'+'<span>'+data.xianshipart.one[0].xianshi_price+'</span>'+'</dd>'+'</dl></div>'
+		var $xianshilist3='<div class="xianshilist">'+'<dl class="xianshi">'+'<dt class="xianshi_pic"><img src="'+data.xianshipart.four[0].src+'"/></dt>'+'<dd class="xianshi_time">'+data.xianshipart.four[0].xianshi_time+'</dd>'+
+		'<dd class="xianshi_name">'+data.xianshipart.four[0].xianshi_name+'</dd>'+'<dd class="xianshi_price">抢购价：'+'<span>'+data.xianshipart.two[0].xianshi_price+'</span>'+'</dd>'+'</dl></div>'
+		
+		$(".xianshi_box").append($xianshilist0)
+		$(".xianshi_box").append($xianshilist1)
+		$(".xianshi_box").append($xianshilist2)
+		$(".xianshi_box").append($xianshilist3)
+		$(".xianshi_name").hover(function(){
+			$(this).css({"color":"orange"})
+		},function(){
+			$(this).css({"color":"black"})
+		})
+	})
+	
+	
+	//新品上市
+	$.getJSON("json/product.json",function(data){
+		
+		
+		for(var i=0;i<13;i++){
+			
+			var $xinping='<dl class="new_box">'+'<dt class="new_pic">'+'<img src="'+data.newlist.new_pic[i].src0+'"/>'+'</dt>'+'<dd class="new_name">'+data.newlist.new_name[i].name+'</dd>'+
+			'<dd class="new_price">'+data.newlist.new_price[i].price+'</dd>'+'</dl>'
+			$(".new_list").append($xinping);
+			$(".new_name").hover(function(){
+				$(this).css({"color":"orange"})
+			},function(){
+				$(this).css({"color":"black"})
+			})
+		}
+
+	})
+	
+	$.getJSON("json/product.json",function(data){
+			var $ad_m='<img src="'+data.newlist.ad_m[0].src1+'"/>';
+			$(".ad_m").append($ad_m);
+	})
+//楼梯部分
+	//左侧部分
+	$.getJSON("json/product.json",function(data){
+		var $floorpic1='<div class="floor_pic">'+'<img src="'+data.floorpart.leftpic[0].src2+'"/>'+'<ul class="floor_list">'+data.floorpart.floor_list[0].floor_li+'</ul>'+'</div>';
+		var $floorpic2='<div class="floor_pic">'+'<img src="'+data.floorpart.leftpic[1].src2+'"/>'+'<ul class="floor_list">'+data.floorpart.floor_list[1].floor_li+'</ul>'+'</div>';
+		var $floorpic3='<div class="floor_pic">'+'<img src="'+data.floorpart.leftpic[2].src2+'"/>'+'<ul class="floor_list">'+data.floorpart.floor_list[2].floor_li+'</ul>'+'</div>';
+		var $floorpic4='<div class="floor_pic">'+'<img src="'+data.floorpart.leftpic[3].src2+'"/>'+'<ul class="floor_list">'+data.floorpart.floor_list[3].floor_li+'</ul>'+'</div>';
+		var $floorpic5='<div class="floor_pic">'+'<img src="'+data.floorpart.leftpic[4].src2+'"/>'+'<ul class="floor_list">'+data.floorpart.floor_list[4].floor_li+'</ul>'+'</div>';
+		var $floorpic6='<div class="floor_pic">'+'<img src="'+data.floorpart.leftpic[5].src2+'"/>'+'<ul class="floor_list">'+data.floorpart.floor_list[5].floor_li+'</ul>'+'</div>';
+		var $floorpic7='<div class="floor_pic">'+'<img src="'+data.floorpart.leftpic[6].src2+'"/>'+'<ul class="floor_list">'+data.floorpart.floor_list[6].floor_li+'</ul>'+'</div>';
+		$(".first_left").append($floorpic1);
+		$(".second_left").append($floorpic2);
+		$(".third_left").append($floorpic3);
+		$(".fourth_left").append($floorpic4);
+		$(".fifth_left").append($floorpic5);
+		$(".sixth_left").append($floorpic6);
+		$(".seventh_left").append($floorpic7);
+		$(".floor_list li").hover(function(){
+			$(this).css({"color":"orange"})
+		},function(){
+			$(this).css({"color":"black"})
+		})
+	})
+	//右侧部分
+	$.getJSON("json/product.json",function(data){
+		
+		for(var i=0;i<10;i++){
+			var $xinping01='<dl class="floor_box">'+'<dt class="new_pic">'+'<img src="'+data.floorpart.floor_pic01[i].src01+'"/>'+'</dt>'+'<dd class="new_name">'+data.floorpart.floor_name01[i].name+'</dd>'+
+			'<dd class="new_price">'+data.newlist.new_price[i].price+'</dd>'+'</dl>'
+			var $xinping02='<dl class="floor_box">'+'<dt class="new_pic">'+'<img src="'+data.floorpart.floor_pic02[i].src01+'"/>'+'</dt>'+'<dd class="new_name">'+data.floorpart.floor_name02[i].name+'</dd>'+
+			'<dd class="new_price">'+data.newlist.new_price[i].price+'</dd>'+'</dl>'
+			var $xinping03='<dl class="floor_box">'+'<dt class="new_pic">'+'<img src="'+data.floorpart.floor_pic03[i].src01+'"/>'+'</dt>'+'<dd class="new_name">'+data.floorpart.floor_name03[i].name+'</dd>'+
+			'<dd class="new_price">'+data.newlist.new_price[i].price+'</dd>'+'</dl>'
+			var $xinping04='<dl class="floor_box">'+'<dt class="new_pic">'+'<img src="'+data.floorpart.floor_pic04[i].src01+'"/>'+'</dt>'+'<dd class="new_name">'+data.floorpart.floor_name04[i].name+'</dd>'+
+			'<dd class="new_price">'+data.newlist.new_price[i].price+'</dd>'+'</dl>'
+			var $xinping05='<dl class="floor_box">'+'<dt class="new_pic">'+'<img src="'+data.floorpart.floor_pic05[i].src01+'"/>'+'</dt>'+'<dd class="new_name">'+data.floorpart.floor_name05[i].name+'</dd>'+
+			'<dd class="new_price">'+data.newlist.new_price[i].price+'</dd>'+'</dl>'
+			var $xinping06='<dl class="floor_box">'+'<dt class="new_pic">'+'<img src="'+data.floorpart.floor_pic06[i].src01+'"/>'+'</dt>'+'<dd class="new_name">'+data.floorpart.floor_name06[i].name+'</dd>'+
+			'<dd class="new_price">'+data.newlist.new_price[i].price+'</dd>'+'</dl>'
+			var $xinping07='<dl class="floor_box">'+'<dt class="new_pic">'+'<img src="'+data.floorpart.floor_pic07[i].src01+'"/>'+'</dt>'+'<dd class="new_name">'+data.floorpart.floor_name07[i].name+'</dd>'+
+			'<dd class="new_price">'+data.newlist.new_price[i].price+'</dd>'+'</dl>'
+			$(".first_right").append($xinping01);
+			$(".second_right").append($xinping02);
+			$(".third_right").append($xinping03);
+			$(".fourth_right").append($xinping04);
+			$(".fifth_right").append($xinping05);
+			$(".sixth_right").append($xinping06);
+			$(".seventh_right").append($xinping07);
+			$(".new_name").hover(function(){
+				$(this).css({"color":"orange"})
+			},function(){
+				$(this).css({"color":"black"})
+			})
+		}
+
+	})
+	//楼梯下方的ad图片
+	$.getJSON("json/product.json",function(data){
+			var $ad_m1='<img src="'+data.newlist.ad_m[1].src1+'"/>';
+			var $ad_m2='<img src="'+data.newlist.ad_m[2].src1+'"/>';
+			var $ad_m3='<img src="'+data.newlist.ad_m[3].src1+'"/>';
+			var $ad_m4='<img src="'+data.newlist.ad_m[4].src1+'"/>';
+			var $ad_m5='<img src="'+data.newlist.ad_m[5].src1+'"/>';
+			var $ad_m6='<img src="'+data.newlist.ad_m[6].src1+'"/>';
+			
+			$(".ad_mf1").append($ad_m1);
+			$(".ad_mf2").append($ad_m2);
+			$(".ad_mf3").append($ad_m3);
+			$(".ad_mf4").append($ad_m4);
+			$(".ad_mf5").append($ad_m5);
+			$(".ad_mf6").append($ad_m6);
+			
+	})
+	
+	
+	
+//尾部不要漏掉	
+})
+
+
+	
+

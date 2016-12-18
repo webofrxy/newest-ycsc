@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+		<script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+	</head>
+	<body>
+		<!--footer start-->
+		<div class="footer_bg">
+			<div class="footer_middle">
+				<div class="footer_list">
+					<div class="footer_phone">
+						<h5>24小时客服热线</h5>
+						<p>4009927293</p>
+					</div>
+					<div class="footer_menue">
+						<dl>
+							<dt>新手上路</dt>
+							<dd>购物流程</dd>
+							<dd>联系客服</dd>
+							<dd>积分说明</dd>
+						</dl>
+						<dl>
+							<dt>客户服务</dt>
+							<dd>申请供应商</dd>
+							<dd>发票说明</dd>
+							<dd>联系我们</dd>
+						</dl>
+						<dl>
+							<dt>配送服务</dt>
+							<dd>签收须知</dd>
+							<dd>配送时间</dd>
+							<dd>配送区域</dd>
+						</dl>
+						<dl>
+							<dt>支付购买</dt>
+							<dd>售后服务</dd>
+							<dd>积分兑换</d>
+							<dd>退换货原则</dd>
+						</dl>
+					</div>
+					<div class="footer_code">
+						<div class="code_left">
+							<h5>手机客户端</h5>
+							<img src="../img/code01.png" alt="" />
+							<p>下载手机端</p>
+						</div>
+						<div class="code_right">
+							<h5>微店商城</h5>
+							<img src="../img/code01.png" alt="" />
+							<p>关注微店</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--footer end-->
+	
+	<!--bottom start -->
+		<div class="bottom_bg">
+			<div class="bottom_middle">
+				<div class="bottom_send">
+					<div class="send_left">
+						<input type="text" id="order"/>
+						<a href="javascript:;">订阅</a>
+					</div>
+					<ul class="send_right">
+						<li class="send_01"></li>
+						<li class="send_02"></li>
+						<li class="send_03"></li>
+						<li class="send_04"></li>
+						<li class="send_05"></li>
+					</ul>
+				</div>
+				<div class="bottom_sure">
+					<div class="bottom_link">友情链接：</div>
+					<div class="bottom_area">
+						<ul>
+							<li>授权证书</li>
+							<li></li>
+							<li></li>
+						</ul>
+						<p>©2005-2020 永辉商城 版权所有，并保留权利</p>
+						<p>地址：dd邮箱：jnadmin@qq.com</p>
+						<p>永辉商城SVN测试第二版</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

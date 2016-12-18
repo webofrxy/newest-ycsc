@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/details.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+		<script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="../js/index.js"></script>
+		<script type="text/javascript" src="../js/login.js"></script>
+		<script type="text/javascript" src="../js/details.js"></script>
+	</head>
+	<body>
+		<!--头部广告-->
+		<div class="Ad_bg">
+			<div class="Ad_middle">
+				<img src="../img/ad_01.jpg"/>
+			</div>
+		</div>
+		<!--注册登录部分-->
+		<div class="top_bg">
+			<div class="top_middle">
+				<ul class="top_fr">
+					<li><a href="###">欢迎光临本店！</a></li>
+					<li><a href="###">登录</a></li>
+					<li ><a href="###" class="top_1">注册</a></li>
+					<li ><a href="###" class="top_2">我的订单</a></li>
+					<li  class="ask_box"><a href="###" class="top_3">帮助中心</a><span class="ask">联系客服</span></li>
+					<li ><a href="###" class="top_4">商城公告</a></li>
+					<li class="top_noborder"><a href="" class="top_5">收藏本站</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--搜索框部分-->
+		<div class="head_bg">
+			<div class="head_middle">
+				<div class="logo">
+					<h1>
+						<a href="index.html"><img src="../img/logo.jpg"/></a>
+					</h1>
+				</div>
+				<div class="search_box">
+					<div class="search">
+						<input type="text" id="searchText"/>
+						<span >搜索</span>
+						<div id="auto"></div>
+					</div>
+					<div class="word">
+						<span>热门搜索：</span>
+						<span>iPhone</span>
+						<span>女装</span>
+						<span>华为</span>
+						<span>化妆品</span>
+						<span>皮鞋</span>
+					</div>
+				</div>
+				<div class="mycenter">
+					<span>我的中心</span>
+				</div>
+				<div class="shoppingcart">
+					<div class="shopping_menue"><a href="javascript:;">购物车<b>0</b>件</a></div>
+					<div class="shopping_box">您的购物车还没有商品，先去选购吧！</div>
+				</div>
+			</div>
+			
+			
+		</div>
+		<!--搜索框功能区-->
+		<script type="text/javascript">
+			var chanageStr = '';
+		//创建键盘单击事件
+		$("#searchText").keyup(function(event){
+			
+			var myEvent = event||window.event;
+			var keyCode = myEvent.keyCode;//定义键值对象，不同的值代表不同的键
+			//console.log(keyCode)
+			//设定只有特殊的键可以有返回值，只有按键盘的字母键，退格，删除，空格，ESC等键才进行响应；8退格backspace46删除delete空格32
+			
+			//获取文本框中的内容
+			var inputTxt=$("#searchText").val();
+			//创建一个对象用来存储传回来的数值
+			var qsData={"wd":inputTxt,"p":"3","cb":"getData","t":new Date().getMilliseconds().toString()}
+			 $.ajax({
+                    async: false,
+                    url: "http://suggestion.baidu.com/su",
+                    type: "GET",
+                    dataType: 'jsonp',
+                    jsonp: 'jsoncallback',
+                    data: qsData,
+                    timeout: 5000,
+                    success: function (json) {
+                    },
+                    error: function (xhr) {
+                    }
+               });      
+               $("#auto").css({"display":"block"})
+		})
+			var highlightindex = -1; 
+			var timeoutId;
+		//回调函数存放的位置
+		function getData(data){
+		
+			var Info=data['s'];
+			var autoNode = $("#auto"); 
+			console.log(Info)
+			for(var i=0;i<Info.length;i++){
+				var wordNode=Info[i];
+				var newDivNode=$("<div>").attr("id",i);//attr里面可以放什么还不清楚
+				newDivNode.attr("style","font-size:12px;height:25px;padding:0 8px;cursor:pointer;");
+				newDivNode.html(wordNode).appendTo(autoNode);
+				
+				newDivNode.mouseover(function(){
+										
+					$(this).css("background-color","#E0E0E0");
+					$(this).click(function(){
+						var comtext=$(this).text();
+						$("#searchText").val(comtext);
+						console.log(comtext)
+						
+					})
+					
+				});
+				newDivNode.mouseout(function(){
+					$(this).css("background-color","white");
+				})
+				$("#searchText").focusin(function(){
+					
+				})
+				$("#searchText").focusout(function(){
+					$("#auto").css({"display":"none"})
+				})
+		
+			}
+			
+		}
+		
+		</script>
+		<!--导航部分 nav start-->
+		<div class="nav_bg">
+			<div class="nav_middle">
+				<div class="thirdlist">
+					全部商品分类<span class="arrow"></span>
+					<div class="expandMenue">
+						<div class="shirtList">
+							<div class="leftList"><span></span><a href="###" class="list_title">精品服装、男装、女装</a><b>&gt;</b>
+								<div class="allList">
+									<dl class="list_item">
+										<dt>时尚女装</dt>
+										<dd></dd>
+									</dl>
+									<dl class="list_item">
+										<dt>精品男装</dt>
+										<dd></dd>
+									</dl>
+									<dl class="list_item">
+										<dt>男童装</dt>
+										<dd></dd>
+									</dl>
+									<dl class="list_item">
+										<dt>女童装</dt>
+										<dd></dd>
+									</dl>
+									<dl class="list_item">
+										<dt>舒适内衣</dt>
+										<dd></dd>
+									</dl>
+									<dl class="list_item">
+										<dt>服装配饰</dt>
+										<dd></dd>
+									</dl>
+								</div>
+								
+							</div>
+							<div class="leftList"><span></span><a href="###" class="list_title">流行鞋帽、男鞋、女鞋</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">潮流箱包、休闲、旅行</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">个护化妆、美容、护肤</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">数码产品、手机、电脑</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">母婴用品、奶粉、玩具</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">休闲饮品、茗茶、饮料</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">居家电器、家电、厨具</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">办公用品、耗材、文具</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">营养保健、成人、滋补</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">汽车养护、保养、装饰</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">奢侈首饰、珠宝、手表</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">家纺布艺、眼镜、礼品</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">户外用品、健身、体育</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">中外名酒、白酒、红酒</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">特色食品、零食、炒货</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">图书音像、金融、励志</a><b>&gt;</b></div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="nav">
+					<a href="###">首页</a>
+					<a href="###">导航网站</a>
+					<a href="###">分销商城</a>
+					<a href="###">票务预订</a>
+					<a href="###">酒店预订</a>
+					<a href="###">海外代购</a>
+					<a href="###">超值团购</a>
+					<a href="###">积分换购</a>
+					<a href="###">9元购</a>
+					<a href="###">店铺街</a>
+					<a href="###">供应商</a>
+					<a href="###">门户网站</a>
+					<a href="###">视频网站</a>
+					<a href="###">19元购</a>
+					<a href="###">天天特价</a>
+					<a href="###">充值</a>
+					
+					
+					
+				</div>
+			</div>
+		</div>
+		
+		<!--商品详情部分-->
+		<div class="product_bg">
+			<div class="product_middle">
+				<div class="product_title">当前位置:<a href="../index.html">首页</a>&gt;<a href="###">户外用品、健身、体育</a>&gt;
+				<a href="###">体育用品</a>&gt;<a href="###">篮球</a>&gt;斯迈博篮球正品大颗粒吸湿软皮耐磨防滑室内外通用特价</div>
+				<div class="product_top">
+					<div class="product_left">
+						<div class="product_box">
+							<div class="glass_left">
+								<div class="glass_pic">
+									<img src="../img/ball_01.jpg" alt="" />
+									<img src="../img/ball_02.jpg" alt="" />
+									<img src="../img/ball_03.jpg" alt="" />
+									<img src="../img/ball_04.jpg" alt="" />
+									<img src="../img/ball_05.jpg" alt="" />
+									<img src="../img/ball_01.jpg" alt="" />
+									<img src="../img/ball_02.jpg" alt="" />
+									<img src="../img/ball_03.jpg" alt="" />
+								</div>
+								<span class="glass-move"></span>
+								<i></i>
+								<span class="glass-mark"></span>
+							</div>
+							<div class="glass_right">
+								<img src="../img/ball_01.jpg" alt="" />
+								<img src="../img/ball_02.jpg" alt="" />
+								<img src="../img/ball_03.jpg" alt="" />
+								<img src="../img/ball_04.jpg" alt="" />
+								<img src="../img/ball_05.jpg" alt="" />
+								<img src="../img/ball_01.jpg" alt="" />
+								<img src="../img/ball_02.jpg" alt="" />
+								<img src="../img/ball_03.jpg" alt="" />
+								
+							</div>
+						</div>
+						<div class="product_menue">
+							<a href="javascript:;" class="glass-l">&lt;</a>
+							<a href="javascript:;" class="glass-r">&gt;</a>
+							<div class="glass_nav">
+								<ul>
+									<li><img src="../img/ball_01.jpg" alt="" /></li>
+									<li><img src="../img/ball_02.jpg" alt="" /></li>
+									<li><img src="../img/ball_03.jpg" alt="" /></li>
+									<li><img src="../img/ball_04.jpg" alt="" /></li>
+									<li><img src="../img/ball_05.jpg" alt="" /></li>
+									<li><img src="../img/ball_01.jpg" alt="" /></li>
+									<li><img src="../img/ball_02.jpg" alt="" /></li>
+									<li><img src="../img/ball_03.jpg" alt="" /></li>
+									<li><img src="../img/ball_01.jpg" alt="" /></li>
+									<li><img src="../img/ball_02.jpg" alt="" /></li>
+									<li><img src="../img/ball_03.jpg" alt="" /></li>
+								</ul>
+							</div>
+						</div>
+						<div class="product_pay">
+							<div class="product_share">
+								<div class="product_s1">
+									<div class="extra01"></div>
+									<div class="share_text1">分享</div>
+								</div>
+								<div class="product_s2">
+									<div class="extra02"></div>
+									<div class="share_text2">收藏</div>
+								</div>
+								
+							</div>
+							<div class="product_isue">
+									<div>付款方式：<a href="javascript:;">支付宝|网银|刷卡</a></div>
+								</div>
+						</div>
+					</div>
+					<div class="product_right">
+						<p class="name_p">斯迈柏篮球正品大颗粒吸湿软皮耐磨防滑室内外通用特价编号：<span>43206730096</span></p>
+						<span class="price_p">市场价：<del>￥379.00元</del></span>
+						<p class="local_price">本站价:<b>￥97.00元</b></p>
+						<p class="brand">品牌:<span>SMILEBOY/斯迈柏</span></p>
+						<p class="evaluation">已售：<span>596件</span>用户评分：<b></b><i>（已有393人评价）</i></p>
+						<p class="color_kind">颜色分类：<a href="javascript:;">大颗粒黄棕色（送7赠品）</a></p>
+						<p class="num_kind">数量：<input type="text" value="1" /><strong class="add"><a href="javascript:;">+</a><a href="javascript:;">-</a></strong>商品总价：<b>￥97.00元</b></p>
+						<div class="button">
+							<a href="javascript:;"></a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		<div class="content_bg">
+			<div class="content_middle">
+				<div class="content_list">
+					<h3>所有分类</h3>
+					<ul>
+						<li><em></em><span>精品服装、男装、女装</span></li>
+						<li><em></em><span>流行鞋帽、男鞋、女鞋</span></li>
+						<li><em></em><span>潮流箱包、休闲、旅行</span></li>
+						<li><em></em><span>个护化妆、美容、护肤</span></li>
+						<li><em></em><span>数码产品、手机、电脑</span></li>
+						<li><em></em><span>母婴用品、奶粉、玩具</span></li>
+						<li><em></em><span>休闲饮品、茗茶、饮料</span></li>
+						<li><em></em><span>居家电器、家电、厨具</span></li>
+						<li><em></em><span>办公用品、耗材、文具</span></li>
+						<li><em></em><span>营养保健、成人、滋补</span></li>
+						<li><em></em><span>汽车养护、保养、装饰</span></li>
+						<li><em></em><span>奢侈首饰、珠宝、手表</span></li>
+						<li><em></em><span>家纺布艺、眼镜、礼品</span></li>
+						<li><em></em><span>户外用品、健身、体育</span></li>
+						<li><em></em><span>中外名酒、白酒、红酒</span></li>
+						<li><em></em><span>特色食品、零食、炒货</span></li>
+						<li><em></em><span>图书音像、金融、励志</span></li>
+					</ul>
+				</div>
+				<!--右侧详情-->
+				<div class="product_detail">
+					<div class="detail_title">
+						<a href="javascript:;" class="title_color">商品详情</a>
+						<a href="javascript:;">规格参数</a>
+						<a href="javascript:;">客户评价</a>
+					</div>
+					<div class="detail_menue">
+						<div class="detail_pic">
+							<img src="../img/detail_pic.png" alt="" />
+						</div>
+						<div class="detail_specific">
+							<img src="../img/detail_evaluation.png" alt="" />
+						</div>
+						<div class="detail_evaluation">
+							<img src="../img/detail_eva.png" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

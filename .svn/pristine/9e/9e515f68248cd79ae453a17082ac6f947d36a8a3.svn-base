@@ -1,0 +1,271 @@
+{
+	 "clothes":{"womenclothes":["连衣裙","T恤","雪纺衫","衬衫","牛仔裤","针织衫","小西裤","卫衣","休闲裤","风衣","毛呢大衣","半身裙","短裤","打底裤","吊带/背心","马甲","正装裤","皮衣","棉服","牛仔外套","羽绒服","皮草","情侣装","演出服","运动服","中老年服装","礼服","旗袍/唐装","婚纱","防晒衣"],
+	 			"manclothes":["衬衫","T恤","牛仔裤","休闲裤","短裤","POLO衫","毛衣/针织衫","西裤","夹克","西服","西服套装","卫裤/运动裤","背心/马甲","卫衣","皮衣","羽绒服","棉服","风衣/呢大衣","中老年男装","唐装/中山装","运动服"],
+	 			"manchild":["套装","休闲裤","棉袄","衬衫","T恤","牛仔裤","毛衣/针织衫","睡衣","羽绒服","外套","运动服","马甲","呢大衣/风衣","小西装","冲锋衣"],
+	 			"womenchild":["裙子","T恤","外套","毛衣/针织衫","短裤","棉袄","牛仔裤","睡衣","呢大衣","衬衫","休闲裤","运动服","羽绒服"],
+	 			"indress":["文胸","塑身美体","连体袜/丝袜","女士睡衣","商务男袜","男士内裤","女士内裤","文胸套装","女士秋衣/裤","男士秋衣裤","少女文胸","情侣睡衣","男士睡衣","浴衣/浴袍","少女内裤"],
+	 			"dress":["领带","领结","丝巾","女士围巾","女士手套","女士腰带","披肩","男士手套","男士围巾","男士腰带"]
+	 			},
+	"scroll":[{"src":"img/scroll0.jpg"},{"src":"img/scroll1.jpg"},{"src":"img/scroll2.jpg"},{"src":"img/scroll3.jpg"},{"src":"img/scroll4.jpg"}],
+	"xianshipart":{
+					"one":[{"id":"0","src":"img/xianshi1.jpg","xianshi_time":"剩余31天23时46分02秒","xianshi_name":"曼纳尔2016秋冬新品毛呢外套中长款韩...","xianshi_price":"￥68.00元"}],
+					"two":[{"id":"1","src":"img/xianshi2.jpg","xianshi_time":"剩余31天23时46分02秒","xianshi_name":"2016秋冬新款连帽羽绒棉服马甲女外套中...","xianshi_price":"￥127.00元"}],
+					"three":[{"id":"2","src":"img/xianshi3.jpg","xianshi_time":"剩余31天23时46分02秒","xianshi_name":"秋冬季女士羽绒棉马甲棉服韩版时尚修身中长...","xianshi_price":"￥87.00元"}],
+					"four":[{"id":"3","src":"img/xianshi4.jpg","xianshi_time":"剩余31天23时46分02秒","xianshi_name":"冬装英伦风青年立领加厚格子条纹棉衣外套 ...","xianshi_price":"￥137.00元"}]
+					},
+	"newlist":{
+				"new_pic":[
+							{"src0":"img/xinping1.jpg"},
+							{"src0":"img/xinping2.jpg"},
+							{"src0":"img/xinping3.jpg"},
+							{"src0":"img/xinping4.jpg"},
+							{"src0":"img/xinping5.jpg"},
+							{"src0":"img/xinping6.jpg"},
+							{"src0":"img/xinping7.jpg"},
+							{"src0":"img/xinping8.jpg"},
+							{"src0":"img/xinping9.jpg"},
+							{"src0":"img/xinping10.jpg"},
+							{"src0":"img/xinping11.jpg"},
+							{"src0":"img/xinping12.jpg"}
+						],
+				"new_name":[
+								{"name":"2016春装新款 童装女童长裤 中大儿童收紧口纯棉休闲裤子 "},
+								{"name":"童裤儿童牛仔长裤潮 韩版童装宝宝春秋装街拍 男童垮裤"},
+								{"name":"男装 精纺弹力修身牛津纺衬衫(长袖) 164161 优衣库"},
+								{"name":"丝丝记忆无硅油洗发水正品批发韩国进口洗护套装控油"},
+								{"name":"冈本 003白金+SKIN纯+OC紧魅避孕套超薄安全套"},
+								{"name":"夏季新款女装修身短款拼接时尚修身长袖连衣裙打底裙 "},
+								{"name":"韩束雪白肌防晒BB霜40ml裸妆遮瑕强隔离防紫外线防水"},
+								{"name":"2016新款女包大包欧美时尚女士手提包复古单肩斜挎包"},
+								{"name":"大码男士短袖夏季纯棉韩版修身立领t恤潮青少年条纹半袖"},
+								{"name":"凯蒂猫毛绒玩具公仔hello kitty猫咪抱枕可爱布娃娃"},
+								{"name":"3D竖版十字绣客厅发财树十字绣生意兴隆摇钱树印花十字绣 "},
+								{"name":"老窖醇香窖藏9 x2瓶52度500ml 浓香型"}
+								
+								
+							],
+				"new_price":[
+								{"price":"￥54.00"},
+								{"price":"￥64.00"},
+								{"price":"￥184.00"},
+								{"price":"￥126.00"},
+								{"price":"￥163.00"},
+								{"price":"￥77.00"},
+								{"price":"￥54.00"},
+								{"price":"￥67.00"},
+								{"price":"￥54.00"},
+								{"price":"￥108.00"},
+								{"price":"￥56.00"},
+								{"price":"￥163.00"}
+							],
+				"ad_m":[
+						{"src1":"img/ad_m01.jpg"},
+						{"src1":"img/ad_m02.jpg"},
+						{"src1":"img/ad_m03.jpg"},
+						{"src1":"img/ad_m04.jpg"},
+						{"src1":"img/ad_m06.jpg"},
+						{"src1":"img/ad_m07.jpg"},
+						{"src1":"img/ad_m08.jpg"}
+						]
+				},
+	"floorpart":{
+					"leftpic":[
+								{"src2":"img/f_title01.jpg"},
+								{"src2":"img/f_title02.jpg"},
+								{"src2":"img/f_title03.jpg"},
+								{"src2":"img/f_title04.jpg"},
+								{"src2":"img/f_title05.jpg"},
+								{"src2":"img/f_title06.jpg"},
+								{"src2":"img/f_title07.png"}
+								
+									
+							],
+					"floor_list":[
+									{"floor_li":"<li>时尚女装</li><li>精品男装</li><li>男童装</li><li>女童装</li><li>舒适内衣</li><li>服装配饰</li>"},
+									{"floor_li":"<li>时尚女鞋</li><li>流行男鞋</li><li>可爱童鞋</li><li>百搭潮帽</li>"},
+									{"floor_li":"<li>潮流女包</li><li>精品男包</li><li>学生书包</li><li>功能箱包</li>"},
+									{"floor_li":"<li>面部护肤</li><li>洗发护发</li><li>身体护肤</li><li>口腔护理</li><li>女性护理</li><li>香水彩妆</li>"},
+									{"floor_li":"<li>电脑整机</li><li>手机通讯</li><li>摄影摄像</li><li>智能设备</li><li>网络产品</li><li>手机配件</li>"},
+									{"floor_li":"<li>奶粉</li><li>营养辅食</li><li>尿裤湿巾</li><li>婴儿洗护</li><li>喂养用品</li><li>童车童床</li>"},
+									{"floor_li":"<li>休闲食品</li><li>进口食品</li><li>地方特产</li><li>海鲜水产</li>"}
+
+								],
+					"floor_pic01":[
+									{"src01":"img/dress01.jpg"},
+									{"src01":"img/dress02.jpg"},
+									{"src01":"img/dress03.jpg"},
+									{"src01":"img/dress04.jpg"},
+									{"src01":"img/dress05.jpg"},
+									{"src01":"img/dress06.jpg"},
+									{"src01":"img/dress07.jpg"},
+									{"src01":"img/dress08.png"},
+									{"src01":"img/dress09.jpg"},
+									{"src01":"img/dress10.jpg"}
+									
+									],
+					"floor_pic02":[
+									{"src01":"img/shoes01.jpg"},
+									{"src01":"img/shoes02.jpg"},
+									{"src01":"img/shoes03.jpg"},
+									{"src01":"img/shoes04.jpg"},
+									{"src01":"img/shoes05.jpg"},
+									{"src01":"img/shoes06.jpg"},
+									{"src01":"img/shoes07.jpg"},
+									{"src01":"img/shoes08.jpg"},
+									{"src01":"img/shoes09.jpg"},
+									{"src01":"img/shoes10.jpg"}
+									
+									],
+					"floor_pic03":[
+									{"src01":"img/box01.jpg"},
+									{"src01":"img/box02.png"},
+									{"src01":"img/box03.jpg"},
+									{"src01":"img/box04.jpg"},
+									{"src01":"img/box05.jpg"},
+									{"src01":"img/box06.jpg"},
+									{"src01":"img/box07.jpg"},
+									{"src01":"img/box08.jpg"},
+									{"src01":"img/box09.jpg"},
+									{"src01":"img/box10.jpg"}
+									
+									],
+					"floor_pic04":[
+									{"src01":"img/face01.jpg"},
+									{"src01":"img/face02.jpg"},
+									{"src01":"img/face03.jpg"},
+									{"src01":"img/face04.jpg"},
+									{"src01":"img/face05.jpg"},
+									{"src01":"img/face06.jpg"},
+									{"src01":"img/face07.jpg"},
+									{"src01":"img/face08.jpg"},
+									{"src01":"img/face09.jpg"},
+									{"src01":"img/face10.jpg"}
+									
+									],
+					"floor_pic05":[
+									{"src01":"img/phone01.jpg"},
+									{"src01":"img/phone02.jpg"},
+									{"src01":"img/phone03.jpg"},
+									{"src01":"img/phone04.jpg"},
+									{"src01":"img/phone05.jpg"},
+									{"src01":"img/phone06.jpg"},
+									{"src01":"img/phone07.jpg"},
+									{"src01":"img/phone08.jpg"},
+									{"src01":"img/phone09.jpg"},
+									{"src01":"img/phone10.jpg"}
+									
+									],
+					"floor_pic06":[
+									{"src01":"img/child01.jpg"},
+									{"src01":"img/child02.jpg"},
+									{"src01":"img/child03.jpg"},
+									{"src01":"img/child04.jpg"},
+									{"src01":"img/child05.jpg"},
+									{"src01":"img/child06.jpg"},
+									{"src01":"img/child07.jpg"},
+									{"src01":"img/child08.jpg"},
+									{"src01":"img/child09.jpg"},
+									{"src01":"img/child10.jpg"}
+									
+									],
+					"floor_pic07":[
+									{"src01":"img/food01.jpg"},
+									{"src01":"img/food02.jpg"},
+									{"src01":"img/food03.jpg"},
+									{"src01":"img/food04.jpg"},
+									{"src01":"img/food05.jpg"},
+									{"src01":"img/food06.jpg"},
+									{"src01":"img/food07.jpg"},
+									{"src01":"img/food08.jpg"},
+									{"src01":"img/food09.jpg"},
+									{"src01":"img/food10.jpg"}
+									
+									],
+					"floor_name01":[
+									{"name":"七匹狼羽绒马甲 冬季新品 男士无袖立领羽绒服背心 白鸭"},
+									{"name":"毛呢外套女2016秋冬季新款女装韩版修身中长款气质单排扣"},
+									{"name":"波司登女式迪士尼长款保暖连帽羽绒服"},
+									{"name":"毛呢外套女2016秋冬季新款女装韩版修身双排扣短款斗篷呢"},
+									{"name":"Karaamoo/韩萌2016冬季新款韩版气质款连帽印章贴标中长"},
+									{"name":"骆驼男装 2016秋冬款新品男士青春纯色可脱卸帽轻薄羽绒"},
+									{"name":"毛呢外套女2016秋冬季新款女装韩版修身显瘦百搭短款加厚"},
+									{"name":"大码女装外套女士中长款韩国修身显瘦加厚韩版冬装A字型"},
+									{"name":"冬季新品韩版时尚拼色棉衣女中长款修身棉服连帽学生外套"},
+									{"name":"Karaamoo/韩萌2016冬季新款韩版简约纯色加厚保暖中长款"}
+									],
+					"floor_name02":[
+									{"name":"牛仔布鞋女士帆布鞋厚底内增高女休闲鞋板鞋平底女鞋潮"},
+									{"name":"亮久久马丁靴女英伦风学生短靴高帮平底女靴棉鞋女冬季"},
+									{"name":"Daphne/达芙妮街头时尚马丁靴2016潮女中跟系带短靴"},
+									{"name":"亮久久韩版百搭毛毛一脚蹬乐福鞋加绒保暖平底休闲棉"},
+									{"name":"男士运动休闲鞋青年板鞋男韩潮跑鞋平底男鞋高中学生棉"},
+									{"name":"厚底高帮女鞋新款休闲女式银色运动鞋增高单鞋圆头绑"},
+									{"name":"韩版棉靴时尚百搭女鞋平底保暖棉鞋女冬季加绒加厚短"},
+									{"name":"大码女装外套女士中长款韩国修身显瘦加厚韩版冬装A字型"},
+									{"name":"Daphne/达芙妮冬欧美时尚平底女鞋 休闲圆头系带马丁靴"},
+									{"name":"学生气垫鞋运动休闲鞋厚底松糕鞋系带板鞋中跟女单鞋"}
+									],
+					"floor_name03":[
+									{"name":"2016新款韩版双肩包女时尚铆钉迷你小背包休闲旅行学院"},
+									{"name":"2016编织双肩包女背包日韩版潮pu女包学院风女士包包"},
+									{"name":"施维茨瑞士军刀双肩包男士背包女韩版旅行包中学生书包"},
+									{"name":"包包2016秋冬新款磨砂双肩包女韩版学院风学生书包"},
+									{"name":"流苏包女包新款复古民族风包绣花手提斜挎包单肩包"},
+									{"name":"2016新款时尚潮流铆钉糖果色小米钉手拿包 休闲女士"},
+									{"name":"女包2016夏款链条包迷你小方包女士小包包斜挎包"},
+									{"name":"2016夏季新款时尚潮流女包 休闲简约单肩定型小包 "},
+									{"name":"施维茨十字 瑞士军刀双肩包十字男女包中学生书包"},
+									{"name":"2016新款软皮双肩包韩版潮流时尚女士背包旅行女包"}
+									],
+					"floor_name04":[
+									{"name":"健肤沐浴露-柠柚沁爽"},
+									{"name":"牙膏套装维C营养鲜橙薄荷120g防蛀亮白清爽120g柔丝"},
+									{"name":"多效活肤霜护肤面霜润肤露保湿补水男士护肤品化妆品"},
+									{"name":"韩后护肤品 花痴水漾保湿霜50g 滋润补水锁水排浊 "},
+									{"name":"章华生态锁色洗发水植物染发专用洗发乳深层修护染"},
+									{"name":"女性私处紧致精华液阴道干涩松弛缩紧阴道紧致收缩"},
+									{"name":"脱毛蜜蜡60g送脱毛修护液 男女士腋毛手臂腋下持久脱毛蜡"},
+									{"name":"水润滋养润发精华素/护发素 "},
+									{"name":"宝洁 Crest佳洁士外柔内刚牙刷 独特杯型刷毛 正品"},
+									{"name":"拉芳护发素精油发膜正品免蒸倒膜焗油膏修复毛躁护理头发"}
+									],
+					"floor_name05":[
+									{"name":"源自华为honor/荣耀 V8全网通标准版 直板 智能手机"},
+									{"name":"Samsung/三星 SM-G3606 联通4G手机"},
+									{"name":"Lenovo/联想 小新 V3000经典版 i7游戏本 笔记本电脑 "},
+									{"name":"Xiaomi/小米 小米Max 16GB 全网通手机 "},
+									{"name":"天猫魔盒 M13_W网络高清电视机顶盒 超清电视盒子 "},
+									{"name":"Nikon/尼康 D3300套机(18-105mm) 数码单反相机"},
+									{"name":"科沃斯地宝魔镜ECO扫地机器人超薄吸尘器全自动"},
+									{"name":"路路顺电动独轮车代步车体感车迷你平衡电动车 "},
+									{"name":"蓝牙触屏智能运动手环"},
+									{"name":"AOC新品 LV243XID 24英寸AH-IPS屏 窄边框液晶"}
+									],
+					"floor_name06":[
+									{"name":"ATTITUDE 进口 婴儿奶瓶果蔬清洁液 加拿大 "},
+									{"name":"钙尔奇 D孕妇钙片碳酸钙"},
+									{"name":"美赞臣 2 段安婴宝 婴儿奶粉 1800g*1盒 适合6-12个月 "},
+									{"name":"婴适宝 金装婴儿纸尿片新生儿尿不湿超薄干爽"},
+									{"name":"贝亲洗护套装 婴儿沐浴露洗发水乳宝宝护臀膏爽身 "},
+									{"name":"强生婴儿娇嫩倍护湿巾 新生儿无香湿纸巾80片*2 特惠"},
+									{"name":"伊利高钙高铁成人配方营养奶粉900*2罐装热销现货特价"},
+									{"name":"贝奇双层宽口径防摔玻璃奶瓶 防胀气新生婴儿奶瓶带 "},
+									{"name":"安儿乐婴儿纸尿裤婴儿尿不湿M48+8片超能吸安尔乐纸"},
+									{"name":"宝宝奶瓶ppsu宽口径 300ml/240 防胀气 弯头宽口 "}
+									],
+					"floor_name07":[
+									{"name":"【三只松鼠_开心果225gx3袋】休闲零食坚果炒货干果 "},
+									{"name":"7D芒果干100g*5包菲律宾进口mango零食品芒果干"},
+									{"name":"咖啡 马来西亚原装进口名馨正品三合一经典速溶 "},
+									{"name":"真巧 涂层蛋卷饼干200g散装多口味休闲食品巧克力"},
+									{"name":"【三只松鼠_柠檬干66gx2袋】休闲零食蜜饯果脯水果 "},
+									{"name":"【善味阁】鲜卤鸭脖15g 真空独立小包装 香辣/五香 "},
+									{"name":"俏嘴巴蔓越莓曲奇饼干180g袋装手工制作烘培特产"},
+									{"name":"良品铺子酱香味/麻辣味鸡蛋干238gx2袋 休闲零食品"},
+									{"name":"日本原装进口 布尔本什锦巧克力味曲奇饼干60枚"},
+									{"name":"韩国进口 海太牌ACE低糖苏打咸饼干218g 低糖代餐休闲零食 "}
+									]
+				}
+
+
+}

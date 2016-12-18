@@ -1,0 +1,101 @@
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,div,p{
+	margin:0;
+	padding:0;
+}
+img{
+	list-style: none;
+	border: none;
+}
+li,ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	font-size: 12px;
+}
+em{
+	list-style: none;
+	
+}
+/*注册部分*/
+.reg_bg{
+	height:470px;
+	
+	
+}
+.reg_middle{
+	width:1190px;
+	height:470px;
+	margin: 0 auto;
+	border: 1px solid #C0C0C0;
+	margin-top: 20px;
+}
+.reg_list{
+	width:630px;
+	height:350px;
+	float:left;
+	border-right: 1px dashed #C0C0C0;
+	font-size: 14px;
+	margin-top: 40px;
+}
+.go_log{
+	width:430px;
+	height:350px;
+	float:right;
+	margin-top:60px;
+}
+.reg_list h2{
+	margin-left: 20px;
+}
+.reg_list input{
+	width:251px;
+	height: 28px;
+}
+.reg_list label{
+	width:90px;
+	height:28px;
+	display: inline-block;
+	text-align: right;
+}
+.reg_list p{
+	width:630px;
+	height:35px;
+	
+	margin-top:10px ;
+}
+.reg_list b{
+	color: red;
+}
+#btn1{
+	width:12px;
+	height:12px;
+	margin-left: 100px;
+}
+.accept{
+	font-size: 12px;
+	height:35px;
+	line-height: 35px;
+}
+#btn{
+	width:100px;
+	height:35px;
+	font-size: 14px;
+	background: #D9002E;
+	color: white;
+	border: none;
+	border-radius: 3px;
+	margin-left: 200px;
+}
+.go_log{
+	font-size: 12px;
+}
+.go_log p{
+	width:300px;
+	height:35px;
+
+}
+#log{
+	width:100px;
+	height:35px;
+	font-size: 14px;
+}

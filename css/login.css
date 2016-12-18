@@ -1,0 +1,96 @@
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,div,p{
+	margin:0;
+	padding:0;
+}
+img{
+	list-style: none;
+	border: none;
+}
+li,ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	font-size: 12px;
+}
+em{
+	list-style: none;
+	
+}
+
+.log_bg{
+	height:459px;
+}
+.log_middle{
+	width:1190px;
+	height:439px;
+	border: 1px solid #C0C0C0;
+	margin-top:20px ;
+	padding-top:20px;
+}
+.log_pic{
+	width:450px;
+	height:310px;
+	float:left;
+}
+.log_pic img{
+	width:436px;
+	height:310px;
+}
+.log_list{
+	width:417px;
+	height:377px;
+	font-size: 12px;
+	float:right;
+	border-left: 1px solid #C0C0C0;
+	margin-right:20px;
+	padding-left: 20px;
+	
+}
+.log_list input{
+	width:318px;
+	height:28px;
+	margin-bottom: 20px;
+}
+.log_list p{
+	width:318px;
+	height:28px;
+}
+.log_list span{
+	display: block;
+	width:318px;
+	height:28px;
+}
+#btn1{
+	width:12px;
+	height:12px;
+}
+.auto_log input{
+	float:left;
+	
+}
+.auto_log a{
+	float:right;
+	color: black;
+}
+#btn{
+	background: #D40034;
+	border-radius: 3px;
+	color: white;
+	border: none;
+}
+.friendcode img{
+	margin-left: 5px;
+}	
+.goreg{
+	width:318px;
+	padding-top:10px;
+	border-top: 1px solid #C0C0C0;
+
+}
+.goreg a{
+	width:318px;
+	display: inline-block;
+	color:red;
+	text-align: right;
+}

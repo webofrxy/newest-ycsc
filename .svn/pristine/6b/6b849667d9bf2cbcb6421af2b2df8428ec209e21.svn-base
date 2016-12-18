@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>永辉商城</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<!--<script type="text/javascript" src="js/search.js"></script>-->
+	</head>
+	<body>
+		<!--头部广告-->
+		<div class="Ad_bg">
+			<div class="Ad_middle">
+				<img src="img/ad_01.jpg"/>
+			</div>
+		</div>
+		<!--注册登录部分-->
+		<div class="top_bg">
+			<div class="top_middle">
+				<ul class="top_fr">
+					<li><a href="###">欢迎光临本店！</a></li>
+					<li><a href="###">登录</a></li>
+					<li ><a href="###" class="top_1">注册</a></li>
+					<li ><a href="###" class="top_2">我的订单</a></li>
+					<li  class="ask_box"><a href="###" class="top_3">帮助中心</a><span class="ask">联系客服</span></li>
+					<li ><a href="###" class="top_4">商城公告</a></li>
+					<li class="top_noborder"><a href="" class="top_5">收藏本站</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--搜索框部分-->
+		<div class="head_bg">
+			<div class="head_middle">
+				<div class="logo">
+					<h1>
+						<a href="index.html"><img src="img/logo.jpg"/></a>
+					</h1>
+				</div>
+				<div class="search_box">
+					<div class="search">
+						<input type="text" id="searchText"/>
+						<span >搜索</span>
+						<div id="auto"></div>
+					</div>
+					<div class="word">
+						<span>热门搜索：</span>
+						<span>iPhone</span>
+						<span>女装</span>
+						<span>华为</span>
+						<span>化妆品</span>
+						<span>皮鞋</span>
+					</div>
+				</div>
+				<div class="mycenter">
+					<span>我的中心</span>
+				</div>
+				<div class="shoppingcart">
+					<div class="shopping_menue"><a href="javascript:;">购物车<b>0</b>件</a></div>
+					<div class="shopping_box">您的购物车还没有商品，先去选购吧！</div>
+				</div>
+			</div>
+			
+			
+		</div>
+		<!--搜索框功能区-->
+		<script type="text/javascript">
+			var chanageStr = '';
+		//创建键盘单击事件
+		$("#searchText").keyup(function(event){
+			
+			var myEvent = event||window.event;
+			var keyCode = myEvent.keyCode;//定义键值对象，不同的值代表不同的键
+			//console.log(keyCode)
+			//设定只有特殊的键可以有返回值，只有按键盘的字母键，退格，删除，空格，ESC等键才进行响应；8退格backspace46删除delete空格32
+			
+			//获取文本框中的内容
+			var inputTxt=$("#searchText").val();
+			//创建一个对象用来存储传回来的数值
+			var qsData={"wd":inputTxt,"p":"3","cb":"getData","t":new Date().getMilliseconds().toString()}
+			 $.ajax({
+                    async: false,
+                    url: "http://suggestion.baidu.com/su",
+                    type: "GET",
+                    dataType: 'jsonp',
+                    jsonp: 'jsoncallback',
+                    data: qsData,
+                    timeout: 5000,
+                    success: function (json) {
+                    },
+                    error: function (xhr) {
+                    }
+               });      
+               $("#auto").css({"display":"block"})
+		})
+			var highlightindex = -1; 
+			var timeoutId;
+		//回调函数存放的位置
+		function getData(data){
+		
+			var Info=data['s'];
+			var autoNode = $("#auto"); 
+			console.log(Info)
+			for(var i=0;i<Info.length;i++){
+				var wordNode=Info[i];
+				var newDivNode=$("<div>").attr("id",i);//attr里面可以放什么还不清楚
+				newDivNode.attr("style","font-size:12px;height:25px;padding:0 8px;cursor:pointer;");
+				newDivNode.html(wordNode).appendTo(autoNode);
+				
+				newDivNode.mouseover(function(){
+										
+					$(this).css("background-color","#E0E0E0");
+					$(this).click(function(){
+						var comtext=$(this).text();
+						$("#searchText").val(comtext);
+						console.log(comtext)
+						
+					})
+					
+				});
+				newDivNode.mouseout(function(){
+					$(this).css("background-color","white");
+				})
+				function a (){
+					$("#searchText").focusin()
+				}
+				a();
+//				$("#searchText").focusin(function(){
+//					
+//				})
+//				$("#searchText").focusout(function(){
+//					$("#auto").css({"display":"none"})
+//				})
+		
+			}
+			
+		}
+		
+		</script>
+		<!--导航部分 nav start-->
+		<div class="nav_bg">
+			<div class="nav_middle">
+				<div class="thirdlist">
+					全部商品分类<span class="arrow"></span>
+					<div class="expandMenue">
+						<div class="shirtList">
+							<div class="leftList"><span></span><a href="###" class="list_title">精品服装、男装、女装</a><b>&gt;</b>
+								<div class="allList">
+									<dl class="list_item">
+										<dt>时尚女装</dt>
+										<dd></dd>
+									</dl>
+									<dl class="list_item">
+										<dt>精品男装</dt>
+										<dd></dd>
+									</dl>
+									<dl class="list_item">
+										<dt>男童装</dt>
+										<dd></dd>
+									</dl>
+									<dl class="list_item">
+										<dt>女童装</dt>
+										<dd></dd>
+									</dl>
+									<dl class="list_item">
+										<dt>舒适内衣</dt>
+										<dd></dd>
+									</dl>
+									<dl class="list_item">
+										<dt>服装配饰</dt>
+										<dd></dd>
+									</dl>
+								</div>
+								
+							</div>
+							<div class="leftList"><span></span><a href="###" class="list_title">流行鞋帽、男鞋、女鞋</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">潮流箱包、休闲、旅行</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">个护化妆、美容、护肤</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">数码产品、手机、电脑</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">母婴用品、奶粉、玩具</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">休闲饮品、茗茶、饮料</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">居家电器、家电、厨具</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">办公用品、耗材、文具</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">营养保健、成人、滋补</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">汽车养护、保养、装饰</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">奢侈首饰、珠宝、手表</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">家纺布艺、眼镜、礼品</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">户外用品、健身、体育</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">中外名酒、白酒、红酒</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">特色食品、零食、炒货</a><b>&gt;</b></div>
+							<div class="leftList"><span></span><a href="###" class="list_title">图书音像、金融、励志</a><b>&gt;</b></div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="nav">
+					<a href="###">首页</a>
+					<a href="###">导航网站</a>
+					<a href="###">分销商城</a>
+					<a href="###">票务预订</a>
+					<a href="###">酒店预订</a>
+					<a href="###">海外代购</a>
+					<a href="###">超值团购</a>
+					<a href="###">积分换购</a>
+					<a href="###">9元购</a>
+					<a href="###">店铺街</a>
+					<a href="###">供应商</a>
+					<a href="###">门户网站</a>
+					<a href="###">视频网站</a>
+					<a href="###">19元购</a>
+					<a href="###">天天特价</a>
+					<a href="###">充值</a>
+					
+					
+					
+				</div>
+			</div>
+		</div>
+		<!--轮播图start-->
+		<div class="scroll_bg">
+			<div class="scroll_middle">
+				<ul class="scroll_box">
+					
+				</ul>
+				<div class="circle">
+					<a href="javascript:;"></a>
+					<a href="javascript:;"></a>
+					<a href="javascript:;"></a>
+					<a href="javascript:;"></a>
+					<a href="javascript:;"></a>
+				</div>
+			</div>
+		</div>
+		<!--限时抢购start-->
+		<div class="xianshi_bg">
+			<div class="xianshi_middle">
+				<div class="xianshi_title"><strong>限时抢购</strong><span>限时购</span></div>
+				<div class="xianshi_box">
+					
+				</div>
+				
+			</div>
+		</div>
+		<!--新品上市start-->
+		<div class="newproduct_bg">
+			<div class="newproduct_middle">
+				<div class="new_title"><strong>新品上市</strong><span>更多新品</span></div>
+				<div class="new_list">					
+											
+				</div>
+				<div class="ad_m"></div>
+			</div>
+		</div>
+		<!--楼梯部分start-->
+		<div class="main_bg">
+			<div class="main_middle">
+				<div class="first_floor">
+					<div class="dress_title"><strong>精品服饰</strong><span>更多新品</span></div>
+					<div class="floor_menue">
+						<div class="first_left">
+							
+						</div>
+						<div class="first_right">
+							
+						</div>
+						<div class="ad_mf1"></div>
+					</div>
+				</div>
+				<div class="second_floor">
+					<div class="dress_title"><strong>鞋子专柜</strong><span>更多新品</span></div>
+					<div class="floor_menue">
+						<div class="second_left">
+							
+						</div>
+						<div class="second_right">
+							
+						</div>
+						<div class="ad_mf2"></div>
+					</div>
+				</div>
+				<div class="third_floor">
+					<div class="dress_title"><strong>潮流箱包</strong><span>更多新品</span></div>
+					<div class="floor_menue">
+						<div class="third_left">
+							
+						</div>
+						<div class="third_right">
+							
+						</div>
+						<div class="ad_mf3"></div>
+					</div>
+				</div>
+				<div class="fourth_floor">
+					<div class="dress_title"><strong>个护化妆</strong><span>更多新品</span></div>
+					<div class="floor_menue">
+						<div class="fourth_left">
+							
+						</div>
+						<div class="fourth_right">
+							
+						</div>
+						<div class="ad_mf4"></div>
+					</div>
+				</div>
+				<div class="fifth_floor">
+					<div class="dress_title"><strong>手机数码</strong><span>更多新品</span></div>
+					<div class="floor_menue">
+						<div class="fifth_left">
+							
+						</div>
+						<div class="fifth_right">
+							
+						</div>
+						<div class="ad_mf5"></div>
+					</div>
+				</div>
+				<div class="sixth_floor">
+					<div class="dress_title"><strong>母婴玩具</strong><span>更多新品</span></div>
+					<div class="floor_menue">
+						<div class="sixth_left">
+							
+						</div>
+						<div class="sixth_right">
+							
+						</div>
+						<div class="ad_mf6"></div>
+					</div>
+				</div>
+				<div class="seventh_floor">
+					<div class="dress_title"><strong>特色食品</strong><span>更多新品</span></div>
+					<div class="floor_menue">
+						<div class="seventh_left">
+							
+						</div>
+						<div class="seventh_right">
+							
+						</div>
+						<div class="ad_mf7"></div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	<!--楼梯部分 end-->	
+	<!--右侧的浮动start-->
+		<div class="float_right">
+			<ul class="f_center">
+				<h3></h3>
+				<li>售前客服</li>
+				<li>售前客服</li>
+				<li>售后客服</li>
+			</ul>
+			<ul class="f_phone">
+				<h3></h3>
+				<li>4009927293</li>
+			</ul>
+			<a href="javascript:;" id="left_btn"></a>
+			
+		</div>
+		<a href="javascript:;" id="right_btn"></a>
+	<!--左侧的浮动-->
+		<div class="float_left">
+			<p class="share_b">分享到：</p>
+			<ul class="share_ul2">
+				<li class="share_01">QQ空间</li>
+				<li class="share_02">新浪微博</li>
+				<li class="share_03">百度首页</li>
+				<li class="share_04">人人网</li>
+				<li class="share_05">腾讯微博</li>
+				<li class="share_06">开心网</li>
+				<li class="share_07">腾讯朋友</li>
+				<li class="share_08">和讯</li>
+				<li class="share_09">豆瓣网</li>
+				<li class="share_10">T时代</li>
+				<li class="share_11">青蛙网</li>
+				<li class="share_12">腾讯网</li>
+				<li class="share_13">淘宝网</li>
+				<li class="share_14">QQ空间</li>
+				<li class="share_15">白树林</li>
+				<li class="share_16">QQ空间</li>
+			</ul>
+			<p class="share_l">更多...</p>
+			<span class="left_share">分享</span>
+		</div>
+	<!--回到顶部start-->
+		<div class="backtop"><a href="###">︿</a></div>
+	
+	<!--footer start-->
+		<div class="footer_bg">
+			<div class="footer_middle">
+				<div class="footer_list">
+					<div class="footer_phone">
+						<h5>24小时客服热线</h5>
+						<p>4009927293</p>
+					</div>
+					<div class="footer_menue">
+						<dl>
+							<dt>新手上路</dt>
+							<dd>购物流程</dd>
+							<dd>联系客服</dd>
+							<dd>积分说明</dd>
+						</dl>
+						<dl>
+							<dt>客户服务</dt>
+							<dd>申请供应商</dd>
+							<dd>发票说明</dd>
+							<dd>联系我们</dd>
+						</dl>
+						<dl>
+							<dt>配送服务</dt>
+							<dd>签收须知</dd>
+							<dd>配送时间</dd>
+							<dd>配送区域</dd>
+						</dl>
+						<dl>
+							<dt>支付购买</dt>
+							<dd>售后服务</dd>
+							<dd>积分兑换</d>
+							<dd>退换货原则</dd>
+						</dl>
+					</div>
+					<div class="footer_code">
+						<div class="code_left">
+							<h5>手机客户端</h5>
+							<img src="img/code01.png" alt="" />
+							<p>下载手机端</p>
+						</div>
+						<div class="code_right">
+							<h5>微店商城</h5>
+							<img src="img/code01.png" alt="" />
+							<p>关注微店</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--footer end-->
+	
+	<!--bottom start -->
+		<div class="bottom_bg">
+			<div class="bottom_middle">
+				<div class="bottom_send">
+					<div class="send_left">
+						<input type="text" id="order"/>
+						<a href="javascript:;">订阅</a>
+					</div>
+					<ul class="send_right">
+						<li class="send_01"></li>
+						<li class="send_02"></li>
+						<li class="send_03"></li>
+						<li class="send_04"></li>
+						<li class="send_05"></li>
+					</ul>
+				</div>
+				<div class="bottom_sure">
+					<div class="bottom_link">友情链接：</div>
+					<div class="bottom_area">
+						<ul>
+							<li>授权证书</li>
+							<li></li>
+							<li></li>
+						</ul>
+						<p>©2005-2020 永辉商城 版权所有，并保留权利</p>
+						<p>地址：dd邮箱：jnadmin@qq.com</p>
+						<p>永辉商城SVN测试第二版</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
