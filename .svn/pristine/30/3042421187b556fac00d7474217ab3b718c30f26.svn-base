@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/shopping-car.css"/>
+	</head>
+	<body>
+		<div class="page-header-bg">
+			<div class="page-header-middle">
+				<div class="page-header-menue">
+					<span class="page-user"><a href="javascript:;">小圆...</a></span>
+					<span>欢迎光临！</span>
+					<span><a href="javascript:;">[退出]</a></span>
+					<span>我的订单</span>
+					<span>帮助中心</span>
+				</div>
+			</div>
+		</div>
+		<div class="shop-bg">
+			<div class="shop-middle">
+				<div class="shop-logo">
+					<img src="../img/logo.jpg" alt="logo" />
+					<div class="shop-step"></div>
+				</div>
+				<div class="shop-name clearfix">
+					<div class="shop-n">我的购物车</div>
+				</div>
+				<div class="shop-extra">
+					<table border="" cellspacing="" cellpadding="">
+						<tr class="shop-title">
+							<th>商品</th>
+							<th>属性</th>
+							<th>单价</th>
+							<th>数量</th>
+							<th>金额</th>
+							<th>操作</th>
+						</tr>
+						<tr>
+							
+						</tr>
+					</table>
+					<div>
+						<a href="javascript:;">清空购物车</a>
+						<div>
+							<span><b>商品总价</b>（不含运费）：<strong></strong></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

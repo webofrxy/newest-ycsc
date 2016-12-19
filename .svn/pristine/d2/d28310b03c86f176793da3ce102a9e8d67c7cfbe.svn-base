@@ -1,0 +1,109 @@
+li, ul, dd, dt, dd, span, h1, h2, h3, h4, h5, span, div {
+  margin: 0;
+  padding: 0;
+}
+
+img, th, td, tr, table {
+  border: none;
+}
+
+em, li, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/*page-header start*/
+.page-header-bg {
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.page-header-middle {
+  height: 119px;
+  width: 1190px;
+  margin: 0 auto;
+}
+
+.page-header-menue {
+  height: 24px;
+  width: 300px;
+  float: right;
+  font-size: 12px;
+}
+
+.page-header-menue span {
+  float: left;
+  border-left: 1px dashed #E0E0E0;
+  margin-left: 5px;
+  padding-left: 5px;
+}
+.page-header-menue span:hover {
+  color: orange;
+}
+.page-header-menue a {
+  color: #D02E2C;
+}
+.page-header-menue a:hover {
+  text-decoration: underline;
+  color: orange;
+}
+
+.page-user {
+  border: none;
+}
+
+.shop-middle {
+  height: 119px;
+  width: 1190px;
+  margin: 0 auto;
+}
+
+.shop-logo {
+  height: 109px;
+  width: 1190px;
+  padding-top: 10px;
+}
+
+.shop-logo img {
+  float: left;
+}
+.shop-logo .shop-step {
+  height: 44px;
+  width: 512px;
+  float: right;
+  background: url(../img/flow_step.png);
+}
+
+.shop-n {
+  float: left;
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.shop-extra {
+  height: 200px;
+  width: 1188px;
+  border: 1px solid #E0E0E0;
+}
+
+.shop-title {
+  height: 80px;
+  width: 1188px;
+  background: #E2E0E0;
+}
+
+/*# sourceMappingURL=shopping-car.css.map */
